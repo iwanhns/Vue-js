@@ -1,0 +1,44 @@
+<!DOCTTYPE html>
+<html>
+<head>
+	<title>List Menampilkan Data Object</title>
+	<script src="https://cdn.jsdelivr.net/npm/vue@2.5.17/dist/vue.js"></script>
+	
+</head>
+<body>
+	<div id="app">
+		<li v-for="value of book">
+				{{value}}
+		</li>
+
+		<br/>
+
+		<li v-for="(value, key) of book">
+			{{ key}} : {{value}}
+		</li>
+
+		<br/>
+
+		<li v-for="(value, key, index) of book">
+			{{ index+1}}. {{key}} : {{value}}
+		</li>
+	</div>
+
+	<script type="text/javascript">
+	var vm = new Vue ({
+		el: '#app',
+		data : {
+			book: {
+			id: 99,
+			title: 'C++ High Performance',
+			description: 'Write code that scles across CPU registers, multi-core, and machine clusters',
+			authors: 'Iwan Sinanto, Yudy Ramadhan',
+			publish_year: 2020,
+			price: 100000, 
+			}
+		} 		
+	  })
+
+	</script> 
+</body>
+</html>	

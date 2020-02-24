@@ -1,0 +1,28 @@
+<!DOCTTYPE html>
+<html>
+<head>
+	<title>Data Attribute</title>
+	<script src="vue.js"></script>
+	<style type="text/css">
+		.title {
+			color : green;
+		}
+	</style>
+</head>
+<body>
+	<div id="app">
+		<h1 v-bind:class="class_h1"> {{message}} </h1>
+	</div>
+
+	<script type="text/javascript">
+	Vue.config.silent = true 
+	var vm = new Vue ({
+		el: '#app',
+		data : {
+		message : "Hello World!",
+		class_h1 : "title"
+		},		
+	  })
+	</script> 
+</body>
+</html>	

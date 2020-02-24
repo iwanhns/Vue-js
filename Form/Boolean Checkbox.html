@@ -1,0 +1,33 @@
+<!DOCTTYPE html>
+<html>
+<head>
+	<title>Form Boolean Checkbox </title>
+	<script src="https://cdn.jsdelivr.net/npm/vue@2.5.17/dist/vue.js"></script>
+	
+</head>
+<body>
+	<div id="app">
+		
+		<h2>Form Boolean Checkbox</h2>
+
+		<form>	
+				<input type="checkbox" id="male" value="Male" v-model="Gender">
+				<label for="nonton">Male</label><br><br>
+								
+				<span>Pilihan : {{Gender}}</span>
+
+			
+		</form>
+	</div>
+
+	<script type="text/javascript">
+	var vm = new Vue ({
+		el: '#app',
+		data : {
+			Gender: ""
+		}, 		
+	  })
+
+	</script> 
+</body>
+</html>	

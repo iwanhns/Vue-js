@@ -1,0 +1,27 @@
+<!DOCTTYPE html>
+<html>
+<head>
+	<title>Directive v-bind</title>
+	<script src="https://cdn.jsdelivr.net/npm/vue@2.5.17/dist/vue.js"></script>
+	
+</head>
+<body>
+	<div id="app">
+		<img v-bind:src="ImageSrc">	
+	</div>
+
+	<script type="text/javascript">
+	var vm = new Vue ({
+		el: '#app',
+		data : {
+			ImageSrc: 'logo-vue.png',
+		} 		
+	  })
+
+	setTimeout(()=>{
+		vm.ImageSrc='flowers.jpg'
+	},5000)
+
+	</script> 
+</body>
+</html>	

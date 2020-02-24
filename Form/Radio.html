@@ -1,0 +1,41 @@
+<!DOCTTYPE html>
+<html>
+<head>
+	<title>Form Radio </title>
+	<script src="https://cdn.jsdelivr.net/npm/vue@2.5.17/dist/vue.js"></script>
+	
+</head>
+<body>
+	<div id="app">
+		
+		<h2>Form Radio</h2>
+
+		<form>	
+			<span><b>Paket</b></span><br>		
+			<input type="radio" id="buku laravel" value="Buku Laravel" v-model="piched">
+			<label for="buku laravel">Buku Laravel</label> 
+			<br>
+
+			<input type="radio" id="buku vue" value="Buku Vue" v-model="piched">
+			<label for="buku vue">Buku Vue</label> 
+			<br>
+
+			<input type="radio" id="buku laravel+vue" value="Buku Laravel + Vue" v-model="piched">
+			<label for="buku laravel+vue">Buku Laravel + Vue</label> 
+			<br><br>
+
+			<span>Pilihan Paket: {{piched}}</span>
+		</form>
+	</div>
+
+	<script type="text/javascript">
+	var vm = new Vue ({
+		el: '#app',
+		data : {
+			piched: ""
+		}, 		
+	  })
+
+	</script> 
+</body>
+</html>	

@@ -1,0 +1,38 @@
+<!DOCTTYPE html>
+<html>
+<head>
+	<title>Form V-model </title>
+	<script src="https://cdn.jsdelivr.net/npm/vue@2.5.17/dist/vue.js"></script>
+	
+</head>
+<body>
+	<div id="app">
+		<form>
+
+			<input type="text" name="title" v-model="title" placeholder="masukkan judul">
+			{{title}} <br><br>
+
+			<textarea name="description" v-model="description" placeholder="masukkan deskripsi"></textarea>
+			{{description}} <br><br>
+
+			<input type="number" name="price" v-model.number="price"><br><br>
+
+			<input type="text" name="title" v-model.trim="title" placeholder="masukkan judul bro"> "{{title}}"
+
+
+
+		</form>
+	</div>
+
+	<script type="text/javascript">
+	var vm = new Vue ({
+		el: '#app',
+		data : {
+			title: "",
+			description: ""
+		}, 		
+	  })
+
+	</script> 
+</body>
+</html>	

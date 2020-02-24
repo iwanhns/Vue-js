@@ -1,0 +1,36 @@
+<!DOCTTYPE html>
+<html>
+<head>
+	<title>List Menampilkan Data Array</title>
+	<script src="https://cdn.jsdelivr.net/npm/vue@2.5.17/dist/vue.js"></script>
+	
+</head>
+<body>
+	<div id="app">
+		<ul>
+			<li v-for="book in books">
+				{{book}}
+			</li>
+		</ul>
+
+		<li v-for="(book, index) in books">
+			{{ index+1}}. {{book}}
+		</li>
+	</div>
+
+	<script type="text/javascript">
+	var vm = new Vue ({
+		el: '#app',
+		data : {
+			books: [
+			'C++ Higt Performance',
+			'Java Object Oriented Programming',
+			'Python Programming',
+			'Mastering PostgreSQL'
+			]
+		} 		
+	  })
+
+	</script> 
+</body>
+</html>	

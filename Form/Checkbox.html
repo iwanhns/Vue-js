@@ -1,0 +1,36 @@
+<!DOCTTYPE html>
+<html>
+<head>
+	<title>Form Multiple Checkbox </title>
+	<script src="https://cdn.jsdelivr.net/npm/vue@2.5.17/dist/vue.js"></script>
+	
+</head>
+<body>
+	<div id="app">
+		
+		<h2>Form Multiple Checkbox</h2>
+
+		<form>	
+				<input type="checkbox" id="nonton" value="Nonton" v-model="checked">
+				<label for="nonton">Nonton</label>
+				<input type="checkbox" id="jalan" value="Jalan" v-model="checked">
+				<label for="jalan">Jalan</label>
+				<input type="checkbox" id="makan" value="Makan" v-model="checked">
+				<label for="makan">Makan</label><br>
+				<span>Pilihan : {{checked}}</span>
+
+			
+		</form>
+	</div>
+
+	<script type="text/javascript">
+	var vm = new Vue ({
+		el: '#app',
+		data : {
+			checked: []
+		}, 		
+	  })
+
+	</script> 
+</body>
+</html>	
