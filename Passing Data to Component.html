@@ -1,0 +1,57 @@
+<!DOCTTYPE html>
+<html>
+<head>
+	<title>Passing Data to Component </title>
+	<script src="https://cdn.jsdelivr.net/npm/vue@2.5.17/dist/vue.js"></script>
+	<style type="text/css">
+		.card{
+			background: #efefef;
+			border: 1px solid #ddd;
+			margin-right: 5px;
+			padding: 5px;
+			width: 200px;
+			float: left;
+		}
+	</style>
+
+
+	
+	
+</head>
+<body>
+	<div id="app">
+		<book
+			title = "C++ High Performance"
+			description = "Write doce that scales across CPU registers, multi-acore, adn machin clusters"
+			image = "https://4.bp.blogspot.com/-dCUQ7yO_vrw/XMgIgoX0QaI/AAAAAAAAAWA/GIdtRZhY0VESIgVobIj9mARKM26WRDPcwCLcBGAs/s640/NBBvhwe.png"
+		>			
+		</book>
+	</div>	
+
+	<script type="text/javascript">
+	var BookComponent = {
+		data(){
+			return {
+				classCard: 'card'
+			}
+		},
+		props: ['title','description','image'],
+		template : `
+			<div :class="classCard">
+			<h3>{{title}}</h3>
+			<img :src="image" style="width:100%">
+			<p v-html="description"></p>
+		`		
+	}
+
+	
+	var vm = new Vue ({
+		el: '#app',	
+		components: {
+			'book': BookComponent,
+		}		
+	  })
+
+	</script> 
+</body>
+</html>	

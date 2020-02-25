@@ -1,0 +1,42 @@
+<!DOCTTYPE html>
+<html>
+<head>
+	<title>Component Dasar </title>
+	<script src="https://cdn.jsdelivr.net/npm/vue@2.5.17/dist/vue.js"></script>
+	
+</head>
+<body>
+	<div id="app">
+		<bagian-atas></bagian-atas>
+		<bagian-kiri></bagian-kiri>
+		<iwan></iwan>
+	</div>
+
+	
+	<script type="text/javascript">
+
+	Vue.component('bagian-atas',{
+	  data(){
+		 return {
+			message: 'Header!'
+		}
+	},
+	template: '<h1> {{message}}</h1>'
+	})
+
+	Vue.component('bagian-kiri',{
+	  data(){
+		 return {
+			message: 'Navside!'
+		}
+	},
+	template: '<h1> {{message}}</h1>'
+	})	
+
+	var vm = new Vue ({
+		el: '#app',			
+	  })
+
+	</script> 
+</body>
+</html>	
