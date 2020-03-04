@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Belajar Vue</title>
+		<script src="vue.js"></script>
+		<script src="vue-router.js"></script>
+	</head>
+	<body>
+
+			<div id="app">
+				<p>
+				<router-link to="/">Home</router-link>
+				<router-link to="/about">About</router-link>
+				</p>
+				<router-view></router-view>
+			</div>
+
+		<script type="module">
+
+			const Home = { template: '<div>Halaman Home</div>' }
+			const About = { template: '<div>Halaman About</div>' }
+
+			const routes = [
+				{ path: '/', component: Home, alias: '/home' },
+				{ path: '/about', component: About }
+			]
+			
+			const router = new VueRouter({
+				routes 
+			})
+			
+			var vm = new Vue({
+				el: '#app',
+				router,
+			})
+		</script>
+	</body>
+</html>

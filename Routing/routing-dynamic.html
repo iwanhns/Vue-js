@@ -8,10 +8,10 @@
 	<body>
 
 			<div id="app">
-				<p>
 				<router-link to="/">Home</router-link>
 				<router-link to="/about">About</router-link>
-				</p>
+				<router-link to="/books">Books</router-link>
+				<hr>
 				<router-view></router-view>
 			</div>
 <!-- 		<div id="app">
@@ -23,13 +23,20 @@
 		</div> -->
 
 		<script type="module">
+			import { BooksComponent } from './BooksComponent.js'
+			import { BookComponent } from './BookComponent.js'
+
 			// definisikan konfigurasi component
 			const Home = { template: '<div>Halaman Home</div>' }
 			const About = { template: '<div>Halaman About</div>' }
 			// mapping route path dengan componentnya
 			const routes = [
 				{ path: '/', component: Home, alias: '/home' },
-				{ path: '/about', component: About }
+				{ path: '/about', component: About },
+				{ path: '/books', component: BooksComponent },
+				{ path: '/book/:id', component: BookComponent },
+				{ path: '*', redirect: '/' }
+
 			]
 			// register routes pada objek router
 			const router = new VueRouter({
